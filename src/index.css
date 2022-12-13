@@ -1,0 +1,65 @@
+/* Bulma */
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css";
+
+* {
+  box-sizing: border-box;
+}
+
+/* For testing divs */
+.outlined {
+  outline: 2px solid black;
+}
+
+/* Make the cursor a pointer on things that link somewhere */
+.navbar-brand,
+.food-item {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+.error {
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 50%;
+}
+
+.food-item {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1%;
+}
+
+.table-wrapper {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.table-bar {
+  width: 75%;
+}
+
+.loading-circle {
+  padding-top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .food-item {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .table-wrapper {
+    padding: 0%;
+  }
+}
+
+/* 4K Monitor */
+@media (min-width: 2000px) {
+}
