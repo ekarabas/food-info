@@ -9,6 +9,7 @@ function FoodPage(props) {
   const [error, setError] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [calories, setCalories] = useState();
+  const serverUrl = process.env.REACT_APP_BACKEND_URL;
 
   // Prepare the fdcId parameter in the URL for use in the fetch request
   const { fdcId } = useParams();
@@ -19,9 +20,7 @@ function FoodPage(props) {
     let data;
 
     try {
-      const response = await fetch(
-        `http://localhost:3001/foodpage?fdcId=${fdcId}`
-      );
+      const response = await fetch(`${serverUrl}/foodpage?fdcId=${fdcId}`);
 
       data = await response.json();
       if (!response.ok) {

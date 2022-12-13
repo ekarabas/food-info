@@ -7,13 +7,14 @@ function FoodList() {
   const [foodList, setFoodList] = useState([]);
   const [error, setError] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const serverUrl = process.env.REACT_APP_BACKEND_URL;
 
   // Get a list of as many food items as possible
   const fetchFoodList = useCallback(async () => {
     setIsLoading(true);
     let data;
     try {
-      const response = await fetch(`http://localhost:3001/foodlist`);
+      const response = await fetch(`${serverUrl}/foodlist`);
       data = await response.json();
 
       if (!response.ok) {
