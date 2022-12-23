@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.json(`Hello, API Key: ${process.env.API_KEY}`);
+  res.json("Hello");
 });
 
 // Home page list of all the food elements
