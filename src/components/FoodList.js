@@ -14,6 +14,7 @@ function FoodList() {
     setIsLoading(true);
     let data;
     try {
+      console.log(`Fetch request from this url: ${serverUrl}/foodlist`);
       const response = await fetch(`${serverUrl}/foodlist`);
       data = await response.json();
 
