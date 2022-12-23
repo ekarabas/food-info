@@ -11,6 +11,7 @@ app.use(cors());
 
 app.get("/", (req, res) => {
   res.json("Hello");
+  res.json(`API Key: ${process.env.API_KEY}`);
 });
 
 // Home page list of all the food elements
