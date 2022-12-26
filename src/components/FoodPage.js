@@ -21,9 +21,9 @@ function FoodPage(props) {
 
     try {
       console.log(
-        `Fetch request from this url: ${serverUrl}/foodpage?fdcId=${fdcId}!`
+        `Fetch request from this url: ${serverUrl}foodpage?fdcId=${fdcId}!`
       );
-      const response = await fetch(`${serverUrl}/foodpage?fdcId=${fdcId}`);
+      const response = await fetch(`${serverUrl}foodpage?fdcId=${fdcId}`);
 
       data = await response.json();
       if (!response.ok) {
